@@ -1,6 +1,6 @@
 # RP2350 Hacking Challenge
 
-Welcome to the Raspberry Pi RP2350 hacking challenge!
+Welcome to the Raspberry Pi RP2350 hacking challenge and bug bounty!
 
 The goal is easy: Find an attack that lets you dump a secret hidden in OTP ROW 0xc08 - the secret is 128-bit long, and protected by OTP_DATA_PAGE48_LOCK1 and RP2350's secure boot!
 
@@ -8,7 +8,7 @@ If you think you have found a break then come to our DEF CON booth at the Embedd
 
 If you can't come to our DEF CON booth, or are participating in the challenge after the DEF CON conference has concluded, please email us with details of your break at [doh@raspberrypi.com](mailto:doh@raspberrypi.com) and we'll be in touch.
 
-This challenge will run from 4PM UK time on 8th August 2024 to 4PM UK time on 7th September 2024.
+This challenge will run from 4PM UK time on 8th August 2024 and conclude at 4PM UK time on 7th September 2024.
 
 Good luck!
 
