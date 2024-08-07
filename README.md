@@ -63,5 +63,5 @@ pico_set_otp_key_output_file(project_name ${CMAKE_CURRENT_LIST_DIR}/otp.json)
 ```
 ## Rules, Terms and Conditions
 
-Please see [here](terms_conditions.md) for terms, conditions and rule for this challenge.
+Please see [here](terms_conditions.md) for terms, conditions and rules for this challenge.
 
