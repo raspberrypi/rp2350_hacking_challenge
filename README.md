@@ -21,7 +21,7 @@ For this challenge we will do the following persistent & irreversible changes to
 - Overwrite & lock data in OTP ROW 0xc08
 - *Enabling security will permanently disable both Hazard3 RISC-V cores (M33 cores will still be operable)*
 
-## Setup
+## Setup - Pico 2 board
 
 - Connect an RP2350 in BOOTSEL mode to your computer via USB
 - The repository already contains signing keys: `ec_private_key.pem` and `ec_public_key.pem`. If you want to generate your own keys you can run `keygen.sh` to generate new ones using openSSL.
@@ -63,5 +63,5 @@ pico_set_otp_key_output_file(project_name ${CMAKE_CURRENT_LIST_DIR}/otp.json)
 ```
 ## Rules, Terms and Conditions
 
-Please see [here](terms_conditions.md) for rules as well as the Terms and Conditions of this challenge.
+Please see [here](terms_conditions.md) for terms, conditions and rule for this challenge.
 
