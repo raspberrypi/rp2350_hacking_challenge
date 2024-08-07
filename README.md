@@ -1,4 +1,4 @@
-# RP2350 DEF CON Hacking Challenge
+# RP2350 Hacking Challenge
 
 Welcome to the Raspberry Pi RP2350 hacking challenge!
 
