@@ -46,7 +46,7 @@ some debug output on what's going on in the chip.
 As the printfs etc. might be susceptible to fault-injection attacks we have disabled them in
 the secure version.
 
-Our challenge Pico2 will run the secure-version of the firmware.
+Our "golden" challenge Pico 2 will run the secure-version of the firmware.
 
 ## Using the chip in the future
 
