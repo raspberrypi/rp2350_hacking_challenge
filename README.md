@@ -1,10 +1,14 @@
-# RP2350 Hacking Challenge
+# RP2350 DEF CON Hacking Challenge
 
 Welcome to the Raspberry Pi RP2350 hacking challenge!
 
 The goal is easy: Find an attack that lets you dump a secret hidden in OTP ROW 0xc08 - the secret is 128-bit long, and protected by OTP_DATA_PAGE48_LOCK1 and RP2350's secure boot!
 
-If you think you have an attack then come to our DEF CON booth at the Embedded Systems Village - we will give you a Pico2 with a custom secret hidden in it. If you manage to extract it you win!
+If you think you have found a break then come to our DEF CON booth at the Embedded Systems Village - we will give you a Pico2 with a custom secret hidden in it. If you manage to extract it you win!
+
+If you can't come to our DEF CON booth, or are participating in the challenge after the DEF CON conference has concluded, please email us with details of your break at [doh@raspberrypi.com](mailto:doh@raspberrypi.com)
+
+This challenge will run from 4PM UK time on 8th August 2024 to 4PM UK time on 7th September 2024.
 
 Good luck!
 
@@ -15,6 +19,7 @@ For this challenge we will do the following persistent & irreversible changes to
 - Enabling secure-boot via `crit1.secure_boot_enable` (but with public keys)
 - Disable debug via `crit1.debug_disable`
 - Overwrite & lock data in OTP ROW 0xc08
+- *Enabling security will permanently disable both Hazard3 RISC-V cores (M33 cores will still be operable)*
 
 ## Setup
 
@@ -56,3 +61,7 @@ pico_sign_binary(project_name ${CMAKE_CURRENT_SOURCE_DIR}/ec_private_key.pem)
 pico_hash_binary(project_name)
 pico_set_otp_key_output_file(project_name ${CMAKE_CURRENT_LIST_DIR}/otp.json)
 ```
+## Rules, Terms and Conditions
+
+Please see [here](terms_conditions.md) for rules as well as the Terms and Conditions of this challenge.
+
