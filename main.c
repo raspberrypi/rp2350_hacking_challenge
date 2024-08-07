@@ -76,7 +76,7 @@ int main()
 	// This is persistent and prevents reading of the OTP pages via picotool and
 	// from non-secure code. Secure code (i.e. if you manage to bypass secure-boot)
 	// will still be able to access the secret. Good luck!
-	if(!is_locked()) {
+	if(is_locked()) {
 		dprintf("OTP area is locked!\n");
 	} else {
 		dprintf("OTP area is not locked!\n");
