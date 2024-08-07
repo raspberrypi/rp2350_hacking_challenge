@@ -4,9 +4,9 @@ Welcome to the Raspberry Pi RP2350 hacking challenge!
 
 The goal is easy: Find an attack that lets you dump a secret hidden in OTP ROW 0xc08 - the secret is 128-bit long, and protected by OTP_DATA_PAGE48_LOCK1 and RP2350's secure boot!
 
-If you think you have found a break then come to our DEF CON booth at the Embedded Systems Village - we will give you a Pico2 with a custom secret hidden in it. If you manage to extract it you win!
+If you think you have found a break then come to our DEF CON booth at the Embedded Systems Village - we will give you a Pico2 with a custom secret hidden in it. If you manage to extract it, you win $10,000!
 
-If you can't come to our DEF CON booth, or are participating in the challenge after the DEF CON conference has concluded, please email us with details of your break at [doh@raspberrypi.com](mailto:doh@raspberrypi.com)
+If you can't come to our DEF CON booth, or are participating in the challenge after the DEF CON conference has concluded, please email us with details of your break at [doh@raspberrypi.com](mailto:doh@raspberrypi.com) and we'll be in touch.
 
 This challenge will run from 4PM UK time on 8th August 2024 to 4PM UK time on 7th September 2024.
 
@@ -23,7 +23,7 @@ For this challenge we will do the following persistent & irreversible changes to
 
 ## Setup
 
-- Connect an RP2350 in bootloader mode to your computer
+- Connect an RP2350 in BOOTSEL mode to your computer via USB
 - The repository already contains signing keys: `ec_private_key.pem` and `ec_public_key.pem`. If you want to generate your own keys you can run `keygen.sh` to generate new ones using openSSL.
 - Next we write the secret that we want to hide using: `./write_otp_secret.sh` - this is irreversible, as we can't "erase" OTP.
 - You can check whether this write was successful by running `./read_otp_secret.sh`
