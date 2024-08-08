@@ -85,7 +85,7 @@ int main()
 	puts("");
 
 #ifndef SECURE_VERSION
-	// This is how you could leak the secret:
+	// This is how you could leak the first 4 bytes of the secret:
 	dprintf("Test access to the OTP before it's locked using SW_LOCK:\n");
 
 	volatile uint32_t *  otp_guarded_data_ptr = ((uint32_t *)(OTP_DATA_GUARDED_BASE + (0xc08*2)));
@@ -99,7 +99,6 @@ int main()
 	lock_sw_lock_48();
 
 #ifndef SECURE_VERSION
-	// This is how you could leak the secret:
 	dprintf("Test access to the OTP after it's locked using SW_LOCK:\n");
 	// We are using an unguarded (non-ecc) read here, as otherwise we cause a bus fault.
 	// (See "OTP Address Map" section in the datasheet.)
