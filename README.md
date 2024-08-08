@@ -68,5 +68,5 @@ pico_set_otp_key_output_file(project_name ${CMAKE_CURRENT_LIST_DIR}/otp.json)
 ```
 ## Rules, Terms and Conditions
 
-Please see [here](terms_conditions.md) for terms, conditions and rules for this challenge.
+Please see [here](https://www.raspberrypi.com/def-con-2024-challenge/) for terms, conditions and rules for this challenge.
 
