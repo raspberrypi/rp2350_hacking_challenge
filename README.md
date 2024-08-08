@@ -2,7 +2,11 @@
 
 Welcome to the Raspberry Pi RP2350 hacking challenge and bug bounty!
 
-The goal is easy: Find an attack that lets you dump a secret hidden in OTP ROW 0xc08 - the secret is 128-bit long, and protected by OTP_DATA_PAGE48_LOCK1 and RP2350's secure boot!
+Watch our quick explainer video:
+[![](assets/hacking-challenge-thumbnail-play.png)](https://hextree.io/rp2350-hacking-challenge)
+
+
+The goal is easy: Find an attack that lets you dump a secret hidden in OTP ROW 0xc08 - the secret is 128-bit long, and protected by `OTP_DATA_PAGE48_LOCK1` and RP2350's secure boot!
 
 If you think you have found a break then come to our DEF CON booth at the Embedded Systems Village - we will give you a Pico2 with a custom secret hidden in it. If you manage to extract it, you win $10,000!
 
@@ -15,6 +19,7 @@ Good luck!
 ## Disclaimer
 
 For this challenge we will do the following persistent & irreversible changes to your RP2350:
+
 - Writing bootkey0 (with a public key - or you can generate your own & build your own firmware)
 - Enabling secure-boot via `crit1.secure_boot_enable` (but with public keys)
 - Disable debug via `crit1.debug_disable`
@@ -36,7 +41,7 @@ For this challenge we will do the following persistent & irreversible changes to
 - Next we enable secure-boot on the chip by running `enable_secureboot.sh` (This irreversibly enables secure-boot! Make sure you keep a backup of your keys!)
     - To fully lock down the chip including disabling debugging and enabling the glitch detectors, please run `lock_chip.sh`
 - And now we are ready to install the firmware:
-    - Either copy rp2350_hacking_challenge_debug_version.uf2 or rp2350_hacking_challenge_secure_version.uf2
+    - Either copy `rp2350_hacking_challenge_debug_version.uf2` or `rp2350_hacking_challenge_secure_version.uf2`
 
 ## What's the difference between the debug and the secure version?
 
@@ -53,7 +58,7 @@ Our "golden" challenge Pico 2 will run the secure-version of the firmware.
 By participating in this challenge you are permanently enabling secure-boot on your device.
 Any firmware you want to install in the firmware you need to sign yourself. You can enable
 signing for other projects by simply adding this to the CMakeLists.txt and copying the
-ec_private_key.pem to your source directoy.
+`ec_private_key.pem` to your source directoy.
 
 ```
 # Signing and hashing
