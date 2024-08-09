@@ -22,19 +22,16 @@ target_link_libraries(rp2350_hacking_challenge_debug_version PRIVATE
         hardware_powman
         )
 
-# pico_set_binary_type(rp2350_hacking_challenge_debug_version)
-
 # enable usb output, disable uart output
 pico_enable_stdio_usb(rp2350_hacking_challenge_debug_version 1)
 pico_enable_stdio_uart(rp2350_hacking_challenge_debug_version 0)
 
-pico_package_uf2_output(rp2350_hacking_challenge_debug_version 0x10000000)
-
 # Signing and hashing
+pico_set_binary_type(rp2350_hacking_challenge_debug_version no_flash)
 pico_sign_binary(rp2350_hacking_challenge_debug_version ${CMAKE_CURRENT_SOURCE_DIR}/ec_private_key.pem)
 pico_hash_binary(rp2350_hacking_challenge_debug_version)
+pico_package_uf2_output(rp2350_hacking_challenge_debug_version 0x10000000)
 pico_set_otp_key_output_file(rp2350_hacking_challenge_debug_version ${CMAKE_CURRENT_LIST_DIR}/otp.json)
-# pico_package_uf2_output(target_name 0x10000000)
 pico_add_extra_outputs(rp2350_hacking_challenge_debug_version)
 
 
@@ -60,12 +57,12 @@ pico_add_extra_outputs(rp2350_hacking_challenge_secure_version)
 # disable usb output, disable uart output
 pico_enable_stdio_usb(rp2350_hacking_challenge_secure_version 0)
 pico_enable_stdio_uart(rp2350_hacking_challenge_secure_version 0)
-pico_package_uf2_output(rp2350_hacking_challenge_secure_version 0x10000000)
 
 # Signing and hashing
+pico_set_binary_type(rp2350_hacking_challenge_secure_version no_flash)
 pico_sign_binary(rp2350_hacking_challenge_secure_version ${CMAKE_CURRENT_SOURCE_DIR}/ec_private_key.pem)
 pico_hash_binary(rp2350_hacking_challenge_secure_version)
+pico_package_uf2_output(rp2350_hacking_challenge_secure_version 0x10000000)
 pico_set_otp_key_output_file(rp2350_hacking_challenge_secure_version ${CMAKE_CURRENT_LIST_DIR}/otp.json)
-# pico_package_uf2_output(target_name 0x10000000)
 pico_add_extra_outputs(rp2350_hacking_challenge_secure_version)
 
