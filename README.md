@@ -57,7 +57,7 @@ Our "golden" challenge Pico 2 will run the secure-version of the firmware, with 
 
 By participating in this challenge you are permanently enabling secure-boot on your device.
 Any firmware you want to install in the firmware you need to sign yourself. You can enable
-signing for other projects by simply adding this to the CMakeLists.txt and copying the
+signing for other projects by simply adding this to the CMakeLists.txt (this needs to be above the `pico_add_extra_outputs`) and copying the
 `ec_private_key.pem` to your source directoy.
 
 ```
