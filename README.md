@@ -5,14 +5,14 @@ Welcome to the Raspberry Pi RP2350 hacking challenge and bug bounty!
 Watch our quick explainer video:
 [![](assets/hacking-challenge-thumbnail-play.png)](https://hextree.io/rp2350-hacking-challenge)
 
+## Update Sept 5th 2024
+No breaks have been reported yet.  
+We are doubling the prize to $20,000!  
+We've extended the term of the challenge, it now runs until midnight on December 31st 2024 (UK time)
 
 The goal is easy: Find an attack that lets you dump a secret hidden in OTP ROW 0xc08 - the secret is 128-bit long, and protected by `OTP_DATA_PAGE48_LOCK1` and RP2350's secure boot!
 
-If you think you have found a break then come to our DEF CON booth at the Embedded Systems Village - we will give you a Pico2 with a custom secret hidden in it. If you manage to extract it, you win $10,000!
-
-If you can't come to our DEF CON booth, or are participating in the challenge after the DEF CON conference has concluded, please email us with details of your break at [doh@raspberrypi.com](mailto:doh@raspberrypi.com) and we'll be in touch.
-
-This challenge will run from 4PM UK time on 8th August 2024 and conclude at 4PM UK time on 7th September 2024.
+If you think you have found a break email us at [doh@raspberrypi.com](mailto:doh@raspberrypi.com) with deatils - we will ship you a Pico2 with a custom secret hidden in it. If you manage to extract it, you win the $20,000!
 
 Good luck!
 
