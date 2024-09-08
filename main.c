@@ -32,10 +32,10 @@ static inline bool is_locked() {
 static inline void lock_otp_secret() {
 	dprintf("Locking OTP secret...\n");
 	otp_cmd_t cmd;
-	cmd.flags = OTP_DATA_PAGE48_LOCK1_ROW | OTP_CMD_ECC_BITS | OTP_CMD_WRITE_BITS;
+	cmd.flags = OTP_DATA_PAGE48_LOCK1_ROW | OTP_CMD_WRITE_BITS;
 	// 3 redundant copies
 	uint32_t value = 0x3c3c3c;
-	uint32_t ret = rom_func_otp_access(&value, sizeof(value), cmd);
+	uint32_t ret = rom_func_otp_access((uint8_t *)&value, sizeof(value), cmd);
 	if (ret) {
 		dprintf("\tLocking failed with error: %d\n", ret);
 		while(1) {
