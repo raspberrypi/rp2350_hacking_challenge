@@ -82,7 +82,7 @@ int main()
 		dprintf("OTP area is not locked!\n");
 		lock_otp_secret();
 	}
-	puts("");
+	dprintf("\n");
 
 #ifndef SECURE_VERSION
 	// This is how you could leak the first 4 bytes of the secret:
