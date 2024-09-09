@@ -12,7 +12,7 @@ We've extended the term of the challenge, it now runs until midnight on December
 
 The goal is easy: Find an attack that lets you dump a secret hidden in OTP ROW 0xc08 - the secret is 128-bit long, and protected by `OTP_DATA_PAGE48_LOCK1` and RP2350's secure boot!
 
-If you think you have found a break email us at [doh@raspberrypi.com](mailto:doh@raspberrypi.com) with deatils - we will ship you a Pico2 with a custom secret hidden in it. If you manage to extract it, you win the $20,000!
+If you think you have found a break email us at [doh@raspberrypi.com](mailto:doh@raspberrypi.com) with details - we will ship you a Pico2 with a custom secret hidden in it. If you manage to extract it, you win the $20,000!
 
 Good luck!
 
