@@ -17,9 +17,10 @@ picotool otp set OTP_DATA_CRIT1.GLITCH_DETECTOR_ENABLE 1
 # Highest sensitivity
 picotool otp set OTP_DATA_CRIT1.GLITCH_DETECTOR_SENS 3
 
-# Lock writes to PAGE1
+# Lock writes to PAGE1, 2, 48
 picotool otp set --raw OTP_DATA_PAGE1_LOCK1 0x101010
 picotool otp set --raw OTP_DATA_PAGE2_LOCK1 0x101010
+picotool otp set --raw OTP_DATA_PAGE48_LOCK1 0x101010
 
 set +e
 set +v

@@ -52,8 +52,6 @@ target_link_libraries(rp2350_hacking_challenge_secure_version PRIVATE
         hardware_i2c
         )
 
-pico_add_extra_outputs(rp2350_hacking_challenge_secure_version)
-
 # disable usb output, disable uart output
 pico_enable_stdio_usb(rp2350_hacking_challenge_secure_version 0)
 pico_enable_stdio_uart(rp2350_hacking_challenge_secure_version 0)
@@ -64,5 +62,5 @@ pico_sign_binary(rp2350_hacking_challenge_secure_version ${CMAKE_CURRENT_SOURCE_
 pico_hash_binary(rp2350_hacking_challenge_secure_version)
 pico_package_uf2_output(rp2350_hacking_challenge_secure_version 0x10000000)
 pico_set_otp_key_output_file(rp2350_hacking_challenge_secure_version ${CMAKE_CURRENT_LIST_DIR}/otp.json)
-pico_add_extra_outputs(rp2350_hacking_challenge_secure_version)
 
+pico_add_extra_outputs(rp2350_hacking_challenge_secure_version)
